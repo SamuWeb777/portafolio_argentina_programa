@@ -1,0 +1,729 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+/*RESET*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+}
+/*HEADER*/
+header{
+    height: 100px;
+    background: #4D4D56;
+    font-size: 1.1em;
+    padding: 0 50px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menuu .btnLogin-popup{
+width: 130px;
+height: 50px;
+background: transparent;
+border: 2px solid #fff;
+outline: none;
+border-radius: 6px;
+cursor: pointer;
+font-size: 1.1em;
+color: #fff;
+font-weight: 500;
+margin-left: 40px;
+}
+.menuu .btnLogin-popup:hover{
+ background: #fff;
+ color: #162938 ;
+}
+.menuu a{
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+}
+.mostrar-menu,
+.esconder-menu{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+}
+.mostrar-menu{
+ order: 1;
+}
+.menuu a:hover,
+.mostrar-menu:hover,
+.esconder-menu:hover{
+ color: #6cc091;
+}
+#check{
+    display: none;
+}
+.menu-fixed{
+    position:fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.5);
+}
+/*BANNER*/
+#banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+    background-image: url(./assets/imagenes/nuevobanner.jpg);
+    height: 87vh;
+    background-size: cover;
+    background-position: center;
+}
+#banner::before{
+    content: '';
+    background: rgba(77, 77, 92, 0.6);
+    position: absolute;
+    width: 100%;
+    height: 87vh;
+    left: 0;
+}
+.contenido-banner{
+    position: relative;
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contenido-banner h3{
+    font-size: 30px;
+    font-weight: 400;
+    padding: 10px 0px;
+}
+.contenido-banner h3 span{
+ font-weight: 600;
+}
+.boton-empezar{
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #6cc091;
+    padding: 20px 40px;
+    align-self: baseline;
+    transition: all 0.4s;
+}
+.boton-empezar:hover{
+    background: #fff;
+    color: #162938 ;
+}
+/*PERSONAS*/
+#persona{
+    background: #fff;
+    padding: 50px 50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 105vh;
+}
+#persona img{
+    border-radius: 100%;
+}
+#persona div{
+    padding: 30px 30px;
+}
+#persona div h4{
+    color: #4D4D5C;
+    font-size: 20px;
+    margin: 15px 0px;
+}
+#persona div p{
+    color: #4d4d5c87;
+    font-size: 20px;
+}
+.saber-mas{
+    display: inline-block;
+    text-decoration: none;
+    color: #6cc091;
+    padding: 10px 10px;
+    border: 3px solid #6cc091;
+    border-radius: 30px;
+    margin-top: 15px;
+    transition: all 0.4s;
+}
+.saber-mas:hover{
+    background: #6cc091 ;
+    color: #fff;
+}
+/*FORMULARIOS*/
+#contacto{
+    background: #6cc091;
+    padding: 50px 0px;
+    color: #fff;
+}
+#contacto h4{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+#contacto form{
+    max-width: 80%;
+    margin: 0 auto;
+}
+.datos-form{
+    display: flex;
+}
+.datos-form div{
+    padding: 10px;
+    flex: 1;
+}
+
+form label{
+    display: block;
+    margin-bottom: 10px;
+}
+form input,
+form textarea{
+    background: #6cc091;
+    border-radius: 10px;
+    border: 2px solid #8dcca9;
+    padding: 10px 5px;
+    outline: 0;
+    color: #fff;
+    width: 100%;
+}
+.mensaje{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.boton-formulario .saber-mas{
+    display: block;
+    border: 1px solid #fff;
+    color: #fff;
+    text-align: center;
+    transition: 0.4s;
+}
+.boton-formulario .saber-mas:hover{
+    background: #4fa776ad;
+}
+/*SKILL*/
+#skill-section{
+    width: 100%;
+    height: auto;
+    padding: 80px 13%;
+    background-color: rgba(0, 0, 0, 0.080);
+}
+.header{
+  width: 100%;
+  margin-bottom: 70px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+.header h2{
+    margin-bottom: -5px;
+}
+.header h2 span{
+    color: #e74d06;
+}
+.skill-main{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 50px;
+    grid-row-gap: 20px ;
+}
+.skill-main .skill-bar .info{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.skill-bar .info .percent{
+    font-weight: bold;
+}
+.skill-bar .bar2{
+    width: 100%;
+    height: 10px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.199);
+    border-radius: 25px;
+    margin-top: 5px;
+}
+.skill-bar .bar2 span{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background-color: #e74d06;
+    border-radius: 25px;
+}
+.skill-bar .bar2 .css{
+    width: 70%;
+    animation: css 3s;
+}
+.skill-bar .bar2 .html{
+    width: 90%;
+    animation: html 3s;
+}
+.skill-bar .bar2 .java{
+    width: 60%;
+    animation: java 3s;
+}
+.skill-bar .bar2 .angular{
+    width: 75%;
+    animation: angular 3s;
+}
+.skill-bar .bar2 .git{
+    width: 85%;
+    animation: git 3s;
+}
+.skill-bar .bar2 .c{
+    width: 80%;
+    animation: c 3s;
+}
+#bodi{
+    background: #333;
+    text-transform: uppercase;
+    padding: 50px 50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.skill h4{
+    text-align: center;
+    text-decoration:underline rosybrown  ;
+}
+.skill h6{
+    margin: 5px;
+    text-align: left;   
+}
+.skill{
+    width: 80%;
+    margin: 80px;
+    color: #fff;
+    padding: 50px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.24);
+  }
+  .skill li{
+    margin: 20px 0;
+    padding: 10px;
+    list-style-type: none;
+  }
+  .bar{
+    background: #353b48;
+    display: block;
+    height: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.24,.8,.25,1);
+  }
+  .bar:hover{
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+  .bar span{
+    height: 20px;
+    float: left;
+    background: linear-gradient(135deg, rgba(236, 0, 140, 1)0%, rgba(252, 103, 103, 1)100%);
+  }
+  .comun{
+    width: 100%;
+    animation: html 2s;
+  }
+  .neg{
+    width: 90%;
+    animation: html 2s;
+  }
+  .res{
+    width: 90%;
+    animation: html 2s;
+  }
+  .trab{
+    width: 100%;
+    animation: html 2s;
+  }
+  .paci{
+    width: 80%;
+    animation: html 2s;
+  }
+  @keyframes html{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 90%;
+    }
+   }
+   @keyframes css{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 70%;
+    }
+   }
+   @keyframes java{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 60%;
+    }
+   }
+   @keyframes angular{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 75%;
+    }
+   }
+   @keyframes c{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 80%;
+    }
+   }
+   @keyframes git{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 85%;
+    }
+   }
+  @keyframes comun{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+   }
+   @keyframes neg{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 90%;
+    }
+    }
+    @keyframes res{
+        0%{
+            width: 0%;
+        }
+        100%{
+            width: 90%;
+        }
+        }
+        @keyframes trab{
+            0%{
+                width: 0%;
+            }
+            100%{
+                width: 100%;
+            }
+            }
+   @keyframes html{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 80%;
+    }
+   }
+/*RESPONSIVE*/
+@media(max-width: 768px){
+    /*HEADER*/
+    .mostrar-menu,
+    .esconder-menu{
+        display: block;
+    }
+    .menuu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #4D4D5C;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+        transition: 0.8s;
+    }
+    .menuu a{
+        display: block;
+        padding: 20px;
+    }
+    .esconder-menu{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+    #check:checked ~ .menuu{
+        right: 0;
+    }
+    /*PERSONAS*/
+    #persona{
+    flex-direction: column;
+    }
+    /*CONTACTO*/
+   .datos-form{
+    flex-direction: column;
+   }
+  /*SKILL*/
+  
+/*-------------------------INICIO DE LOGIN-------------------------*/
+}
+
+#BODY{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #dde6f0;
+    background-size: cover;
+    background-position: center;
+}
+.wrapper{
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform .5s ease, height .2s ease;
+}
+.wrapper.active-popup{
+    transform: scale(1);
+}
+.wrapper.active{
+    height: 520px ;
+}
+.wrapper .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #162938;
+    font-size: 2em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+.wrapper .form-box{
+    width: 100%;
+    padding: 40px;
+}
+
+.wrapper.active .form-box.login{
+    transition: none;
+    transform: translateX(-400px);
+}
+.wrapper .form-box.register{
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+.wrapper.active .form-box.register{
+    transition: transform .18s ease;
+    transform:translateX(0);
+}
+.form-box h2{
+    font-size: 2em;
+    color: #162938;
+    text-align: center;
+}
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162838;
+    margin: 30px 0;
+}
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #162938; 
+    font-weight: 600;
+    padding: 0 35px 0 35px; 
+}
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #162938;
+    line-height: 57px;
+}
+.remember-forgot {
+    font-size: .9em ;
+    color: #162938;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.remember-forgot label input{
+    accent-color: #162938;
+    margin-right: 3px;
+}
+.remember-forgot a{
+    color: #162838;
+    text-decoration: none;
+}
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+.btn1 {
+    width: 100%;
+    height: 45px;
+    background: #162938;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+}
+.login-register{
+    font-size: .9em;
+    color:#162938 ;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+.login-register p a{
+    color: #162938;
+    text-decoration: none;
+    font-weight: 600 ;
+}
+.login-register p a:hover{
+    text-decoration: underline;
+}
+/*------------------------FIN DE LOGIN---------------------*/
+:root{
+    --facebook: #3b5999;
+    --instagram: #e4405f;
+    --github: #092327;
+}
+.menu{
+   list-style: none;
+   padding: 1000;
+   background: #092327;
+   width: 100%;
+   max-width: 1550px;
+   margin:auto;
+}
+.menu  li{
+   display: inline-block;
+   text-align: center;
+}
+.menu li a:hover{
+    background: #ef8354;
+}
+.menu li a{
+   text-decoration: none;
+   color: white;
+   padding: 30px;
+   display: block;
+}
+/*--pie de pagina--*/
+.pie-pagina{
+background: #4D4D5c;
+color: #cccccc4a;
+text-align: center;
+padding: 10px opx;
+}
+.pie-pagina .grupo-1{
+width: 100%;
+max-width: 1200px;
+margin: 0 auto;
+display: grid;
+padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie-pagina .grupo-1 .box h2{ 
+   text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.pie-pagina .grupo-1 .box{
+    text-align: center;
+    color: #efefef;
+    margin-bottom: 10px;
+}
+.pie-pagina .grupo-2{
+    color: #fff;
+}
+.redes ul li{
+    display: inline-block;
+    margin: 0 5px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+.redes ul li a{
+    display: block;
+    padding: 0 10px;
+    background: #333;
+    color: #fff;
+    line-height: 50px;
+    font-size: 18px;
+    box-shadow: 0 3px 5px 0px rgba(0, 0, 0, .2);
+    transition: .2s;
+}
+.redes ul:hover a{
+    filter: blur(2px);
+}
+.redes ul li a:hover{
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 5px 0px rgba(0, 0, 0, .4);
+    filter: none;
+}
+.redes ul li .facebook:hover{
+    background: var(--facebook);
+}
+.redes ul li .instagram:hover{
+    background: var(--instagram);
+}
+.redes ul li .github:hover{
+    background: var(--github);
+}

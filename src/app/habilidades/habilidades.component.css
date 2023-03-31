@@ -1,0 +1,15 @@
+.row{
+    background-color: #a1b5cb;
+    padding: 20px;
+}
+.row h2{
+    text-align: center;
+    padding: 40px;
+}
+.row h1{
+    text-align: center;
+    padding: 20px;
+}
+.row span{
+    color: navy;
+}
